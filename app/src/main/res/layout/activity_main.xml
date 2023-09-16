@@ -6,72 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="#00FFFFFF"
-        android:text="Identificador"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="10dp" />
-
-    <Button
-        android:id="@+id/btGallery"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_margin="5dp"
-        android:onClick="abrirGaleria"
-        android:text="Galería"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/btCamera"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-    <Button
-        android:id="@+id/btCamera"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_margin="5dp"
-        android:onClick="abrirCamera"
-        android:text="Cámara"
-        app:layout_constraintLeft_toRightOf="@+id/btGallery"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtResults"
-        app:layout_constraintTop_toBottomOf="@+id/btGallery" />
-
+        android:id="@+id/ResultadoImagen"
+        android:layout_width="375dp"
+        android:layout_height="341dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/ScanearBoton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <TextView
-        android:id="@+id/txtResults"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:inputType="textMultiLine"
-        android:scrollbars="vertical"
-        android:text="Resultados:"
-        app:layout_constraintBottom_toTopOf="@id/btObject" />
+        android:id="@+id/Resultado"
+        android:layout_width="367dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="28dp"
+        android:text="Selecciona una foto para identificar"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/ResultadoImagen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btObject"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_margin="10dp"
-        android:onClick="PersonalizedModel"
-        android:text="Indentificar"
+        android:id="@+id/ScanearBoton"
+        android:layout_width="373dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="32dp"
+        android:text="Identificar Jugador"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botonCaptura"
+        android:layout_width="133dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="48dp"
+        android:text="CAMERA"
+        app:layout_constraintBottom_toTopOf="@+id/Resultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <Button
+        android:id="@+id/GaleriaBoton"
+        android:layout_width="133dp"
+        android:layout_height="59dp"
+
+        android:layout_marginEnd="48dp"
+        android:text="Galería"
+        app:layout_constraintBottom_toTopOf="@+id/Resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
